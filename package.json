@@ -1,0 +1,25 @@
+{
+  "name": "Music-Service-Client-web-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "retrieveYouTubeData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omerokach/Music-Service-Client-web-application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omerokach/Music-Service-Client-web-application/issues"
+  },
+  "homepage": "https://github.com/omerokach/Music-Service-Client-web-application#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react-router-dom": "^5.2.0",
+    "youtube-music-api": "^1.0.6"
+  }
+}
