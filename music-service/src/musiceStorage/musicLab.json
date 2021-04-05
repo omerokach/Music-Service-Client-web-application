@@ -366,8 +366,6 @@
 				"trackCount": 13,
 				"date": { "year": 2018, "month": 8, "day": 31 },
 				"songs": [
-					null,
-					null,
 					{
 						"id": "mvSItvjFE1c",
 						"snippet": {
@@ -385,11 +383,6 @@
 						"img": "https://lh3.googleusercontent.com/JS6MK7XawzUUeCq-ANPfjk2BvkRnz5lblyK59uOhV9lmYSNdlZJx3KUQ6eF2CC7gjKOPO4Rq8tMPO2g=w544-h544-l90-rj",
 						"songName": "Eminem - Lucky You ft. Joyner Lucas"
 					},
-					null,
-					null,
-					null,
-					null,
-					null,
 					{
 						"id": "FhF9RwkHAJw",
 						"snippet": {
@@ -424,7 +417,6 @@
 						"img": "https://lh3.googleusercontent.com/JS6MK7XawzUUeCq-ANPfjk2BvkRnz5lblyK59uOhV9lmYSNdlZJx3KUQ6eF2CC7gjKOPO4Rq8tMPO2g=w544-h544-l90-rj",
 						"songName": "Eminem - Fall"
 					},
-					null,
 					{
 						"id": "X-TkrWpO75k",
 						"snippet": {
@@ -6993,39 +6985,6 @@
 					}
 				],
 				"id": "61ad352a-4403-454a-bddc-a6dc56024c7f",
-				"artistName": "Drake"
-			},
-			{
-				"thumbnail": "https://lh3.googleusercontent.com/vPnGknG24yLK7bneu3SpBU4LW-EIUmhPupX4I6zY7dYZ7g2D23JQlkBGokI-btjjrPrZA5SCwc2H775t=w544-h544-l90-rj",
-				"title": "More Life",
-				"description": "More Life.\nMore time with family and friends. More Life.\nI've still got vibrations to send. More Life.\nThey say that we could live forever\nAt night I pray it's true\nI've done so much in my short time and still there's more to do\nBut if someone should come collecting\nSooner than we're all expecting\nAt least the life you lived was one for you",
-				"trackCount": 22,
-				"date": { "year": 2017, "month": 3, "day": 18 },
-				"songs": [
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null,
-					null
-				],
-				"id": "6e791e25-19e1-4f7e-b121-af0086b8ad25",
 				"artistName": "Drake"
 			},
 			{
