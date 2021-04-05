@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter, Link } from "react-router-dom";
 import data from "../musiceStorage/musicLab.json";
 import {
   findTopFiveSongs,
@@ -19,10 +20,18 @@ function Home(props) {
   const [musicLibray, setMusicLibrary] = useState(data);
   return (
     <div>
-      <div id="top-artist"></div>
-      <div id="top-albums"></div>
-      <div id="top-songs"></div>
-      <div id="top-playlist"></div>
+      <div id="top-artist">
+        <Link></Link>
+      </div>
+      <div id="top-albums">
+        <Link></Link>
+      </div>
+      <div id="top-songs">
+        <Link></Link>
+      </div>
+      <div id="top-playlist">
+        <Link></Link>
+      </div>
     </div>
   );
 }
