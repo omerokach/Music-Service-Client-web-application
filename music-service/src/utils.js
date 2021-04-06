@@ -108,18 +108,30 @@ export function findTopFivePlayList() {
   let topFivePlayList = [];
   let playList = [];
   //taking only the first 5
+  let playListId = 1;
+  const playListName = [
+    "Most viewed",
+    "Made just for you",
+    "Clasic",
+    "Nostalgic",
+    "Mixed",
+  ];
   allSongs.forEach((song) => {
     for (let i = 0; i < 125; i++) {
       if (song.statistics.viewCount === topViews[i]) {
         playList.push(song);
         if (playList.length === 25) {
-          topFivePlayList.push(playList);
+          topFivePlayList.push({
+            id: playListId,
+            playListName: playListName[playListId],
+            songs: playList,
+          });
+          playListId += 1;
           playList = [];
         }
       }
       if (topFivePlayList.length === 5) break;
     }
   });
-  console.log("topFivePlayList", topFivePlayList);
   return topFivePlayList;
 }
