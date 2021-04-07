@@ -18,12 +18,24 @@ img {
   padding-left: 5rem;
 }
 .artist-component {
+  color: #1b1b1b;
+  display: flex;
+  justify-content: space-evenly;
   margin: auto;
-  width: 60%;
-  width: 25rem;
+  padding-bottom: 22rem;
+  width: 50%;
+  padding-top: 1rem;
   height: 20rem;
 }
 #artist-img-component {
   width: 25rem;
   height: 20rem;
+}
+.acordion-container {
+  margin: auto;
+  width: 45rem;
+  height: 20rem;
+}
+.acordion-item-panel {
+  border-radius: 100px;
 }

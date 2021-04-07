@@ -1,71 +1,73 @@
 import React from "react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
-
-// Demo styles, see 'Styles' section below for some notes on use.
-import "react-accessible-accordion/dist/fancy-example.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
+import data from "../musiceStorage/musicLab.json";
+import MyNavbar from "./MyNavbar";
 
-// <div className='artist-component'>
-//     <img id='artist-img-component' src= {artist.thumbnail.url} alt='artist img'></img>
-//     {console.log(artist)}
-// </div>
 function Artist(props) {
-  const artist = props.location.aboutProps.artist;
+  const artist = data.filter((artist) => {
+    return artist.id === props.match.params.id;
+  })[0];
   const { albumArray } = artist;
   return (
-    <Accordion>
-      {albumArray.map((album) => (
-        <AccordionItem>
-          <AccordionItemHeading>
-            <AccordionItemButton>{album.title}</AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel>
-            {album.songs.map((song) => (
-              <Link to={{pathname:`/song/:id`, aboutProps:{song}}} >{song.songName}</Link>
-            ))}
-          </AccordionItemPanel>
-        </AccordionItem>
-      ))}
-    </Accordion>
+    <>
+      <MyNavbar />
+      <div className="artist-component">
+        <div>
+          <Card border="light" style={{ width: "18rem", height: "20rem" }}>
+            <Card.Header style={{ color: "black" }}>
+              Artist Details:
+            </Card.Header>
+            <Card.Body>
+              <Card.Title>{artist.artistName}</Card.Title>
+              <Card.Text>
+                {console.log(artist)}
+                <p>Number of albums: {albumArray.length}</p>
+                <p>Total views: {artist.views}</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </div>
+        <img
+          id="artist-img-component"
+          src={artist.thumbnail.url}
+          alt="artist img"
+        ></img>
+      </div>
+      <div className="acordion-container">
+        <h3>Albums</h3>
+        <Accordion>
+          {console.log(Accordion)}
+          {albumArray.map((album, i) => {
+            return (
+              <Card>
+                <Accordion.Toggle
+                  style={{ color: "black" }}
+                  as={Card.Header}
+                  eventKey={`${i}`}
+                >
+                  {album.title}
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey={`${i}`}>
+                  <Card.Body>
+                    {album.songs.map((song) => (
+                      <Link
+                        to={{ pathname: `/song/:id`, aboutProps: { song } }}
+                      >
+                        <p>{song.songName}</p>
+                      </Link>
+                    ))}
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+            );
+          })}
+        </Accordion>
+      </div>
+    </>
   );
-  //   return (
-  //     <Accordion>
-  //       <AccordionItem>
-  //         <AccordionItemHeading>
-  //           <AccordionItemButton>
-  //             What harsh truths do you prefer to ignore?
-  //           </AccordionItemButton>
-  //         </AccordionItemHeading>
-  //         <AccordionItemPanel>
-  //           <p>
-  //             Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat
-  //             occaecat ut occaecat consequat est minim minim esse tempor laborum
-  //             consequat esse adipisicing eu reprehenderit enim.
-  //           </p>
-  //         </AccordionItemPanel>
-  //       </AccordionItem>
-  //       <AccordionItem>
-  //         <AccordionItemHeading>
-  //           <AccordionItemButton>
-  //             Is free will real or just an illusion?
-  //           </AccordionItemButton>
-  //         </AccordionItemHeading>
-  //         <AccordionItemPanel>
-  //           <p>
-  //             In ad velit in ex nostrud dolore cupidatat consectetur ea in ut
-  //             nostrud velit in irure cillum tempor laboris sed adipisicing eu esse
-  //             duis nulla non.
-  //           </p>
-  //         </AccordionItemPanel>
-  //       </AccordionItem>
-  //     </Accordion>
-  //   );
 }
 
 export default Artist;

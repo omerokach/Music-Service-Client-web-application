@@ -15,6 +15,7 @@ import PlayListIcon from "./PlayListIcon";
 import SongIcon from "./SongIcon";
 import AlbumIcon from "./AlbumIcon";
 import ArtistIcon from "./ArtistIcon";
+import MyNavbar from "./MyNavbar.js";
 
 const topFiveArtists = findTopFiveArtists();
 const topFiveSongs = findTopFiveSongs();
@@ -23,6 +24,7 @@ const topfivePlayList = findTopFivePlayList();
 function Home(props) {
   return (
     <div>
+      <MyNavbar />
       <header id="home-header">
         <h1>Well come to the music service</h1>
       </header>

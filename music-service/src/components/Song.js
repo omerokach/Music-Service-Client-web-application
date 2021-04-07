@@ -4,7 +4,8 @@ function Song(props) {
   const song = props.location.aboutProps;
   return (
     <div>
-      <img src={song.img} alt='song img'></img>
+      {console.log(song.song)}
+      <img src={song.song.img} alt="song img"></img>
     </div>
   );
 }
