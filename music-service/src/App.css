@@ -47,12 +47,6 @@ img {
   display: flex;
   justify-content: space-evenly;
 }
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box !important;
-} */
-
-/* html, body {
-  height: 100%;
-} */
+.song-details{
+  padding-right: 1rem;
+}

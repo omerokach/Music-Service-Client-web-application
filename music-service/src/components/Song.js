@@ -19,17 +19,16 @@ function Song(props) {
     <MyNavbar />
     <div className="song-component">
       {console.log(song)}
-      <div>
+      <div className='song-details'>
       <Card border="light" style={{ width: "18rem", height: "20rem" }}>
         <Card.Header style={{ color: "black" }}>Song Details:</Card.Header>
         <Card.Body>
           <Card.Title>{song.songName}</Card.Title>
           <Card.Text>
             {console.log(song)}
-            <p>Num of comments: {song.statistics.commentCount}</p>
-            <p>Num of comments: {song.statistics.commentCount}</p>
-            <p>Num of dislikeCount: {song.statistics.dislikeCount}</p>
-            <p>Num od likes: {song.statistics.likeCount}</p>
+            <p>Number of comments: {song.statistics.commentCount}</p>
+            <p>dislikes: {song.statistics.dislikeCount}</p>
+            <p>likes: {song.statistics.likeCount}</p>
             <p>Number of views: {song.statistics.viewCount}</p>
           </Card.Text>
         </Card.Body>
