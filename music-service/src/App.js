@@ -9,12 +9,6 @@ import Song from "./components/Song";
 
 function App() {
   return (
-    <div className="App">
-      <div class="lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
