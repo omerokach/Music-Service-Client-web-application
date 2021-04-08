@@ -47,6 +47,10 @@ img {
   display: flex;
   justify-content: space-evenly;
 }
-.song-details{
+.song-details {
   padding-right: 1rem;
+}
+li a {
+  color: whitesmoke;
+  text-decoration: none;
 }
