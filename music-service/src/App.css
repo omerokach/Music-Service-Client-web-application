@@ -39,3 +39,20 @@ img {
 .acordion-item-panel {
   border-radius: 100px;
 }
+.song-component {
+  font-size: 1rem;
+  margin: auto;
+  margin-top: 10rem;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+} */
+
+/* html, body {
+  height: 100%;
+} */

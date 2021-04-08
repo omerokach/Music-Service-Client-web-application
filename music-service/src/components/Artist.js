@@ -54,7 +54,7 @@ function Artist(props) {
                   <Card.Body>
                     {album.songs.map((song) => (
                       <Link
-                        to={{ pathname: `/song/:id`, aboutProps: { song } }}
+                        style={{'text-decoration': 'none'}}to={{ pathname: `/song/${song.id}`, aboutProps: { song } }}
                       >
                         <p>{song.songName}</p>
                       </Link>

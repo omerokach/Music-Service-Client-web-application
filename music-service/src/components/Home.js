@@ -1,16 +1,10 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
 import {
   findTopFiveSongs,
   findTopFiveArtists,
   findTopFiveAlbums,
   findTopFivePlayList,
 } from "../utils";
-import PlayList from "./PlayList";
-import Song from "./Song";
-import Artist from "./Artist";
-import Album from "./Album";
-import { Route, Switch } from "react-router";
 import PlayListIcon from "./PlayListIcon";
 import SongIcon from "./SongIcon";
 import AlbumIcon from "./AlbumIcon";
